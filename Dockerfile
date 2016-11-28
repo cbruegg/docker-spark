@@ -2,7 +2,7 @@ FROM sequenceiq/hadoop-docker:2.6.0
 MAINTAINER cbruegg
 
 #support for Hadoop 2.6.0
-RUN curl -s https://cbruegg.com/dl/spark-2.1.0-SNAPSHOT-bin-2.2.0.tgz | tar -xz -C /usr/local/
+RUN curl -s http://direct.cbruegg.com/dl/spark-2.1.0-SNAPSHOT-bin-2.2.0.tgz | tar -xz -C /usr/local/
 RUN cd /usr/local && ln -s spark-2.1.0-SNAPSHOT-bin-2.2.0.tgz spark
 ENV SPARK_HOME /usr/local/spark
 RUN mkdir $SPARK_HOME/yarn-remote-client
